@@ -1,6 +1,6 @@
 package ProductEntityes.Interfaces;
 
-public interface Smartphone {
+public interface Smartphone extends Product {
 
     public String getModel();
     public void setModel(String model);

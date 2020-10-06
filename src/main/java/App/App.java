@@ -17,13 +17,12 @@ public class App {
         );
         ProductFactory productFactory = new AppleFactory();
         Smartphone smartphone = productFactory.createSmartphone();
-        Builder builder = new SmartphoneBuilder(smartphone);
+        Builder<Smartphone> builder = new SmartphoneBuilder(smartphone);
         builder.setModel("sdvv");
         builder.setPrise(323);
         builder.build();
         smartphone.getModel();
         smartphone.getPrice();
-        console.listProduct();
-
+        console.addProduct();
     }
 }

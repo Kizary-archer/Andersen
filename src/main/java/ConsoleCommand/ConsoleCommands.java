@@ -12,9 +12,7 @@ public class ConsoleCommands {
         System.out.println("add");
     }
 
-    public void del() {
-        System.out.println("del");
-    }
+    public void del() {System.out.println("del");}
 
     public void list() {
         System.out.println("list");

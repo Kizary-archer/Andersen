@@ -1,6 +1,6 @@
 package ProductEntityes.Interfaces;
 
-public interface TV {
+public interface TV extends Product {
 
     public String getModel();
     public void setModel(String model);
