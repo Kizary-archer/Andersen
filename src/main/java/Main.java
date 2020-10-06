@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args) {
 
        ProductFactory productFactory = new AppleFactory();
-       TV tv = productFactory.createTV();
-        Builder builder = new TVBuilder(tv);
+        TV tv = productFactory.createTV();
+        Builder<TV> builder = new TVBuilder(tv);
         builder.setPrise(500);
         builder.setModel("sasasa");
         builder.build();
