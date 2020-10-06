@@ -7,6 +7,7 @@ public class SamsungTV implements TV {
 
     String model;
     int price;
+    final String manufactory = "Samsung";
 
     @Override
     public String getModel() {
@@ -26,5 +27,9 @@ public class SamsungTV implements TV {
     @Override
     public void setPrice(int price) {
 
+    }
+    @Override
+    public String getManufactory() {
+        return manufactory;
     }
 }

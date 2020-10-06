@@ -1,9 +1,9 @@
 package ConsoleCommand;
 
 public class addCommand implements Command {
-    ConsoleCommand consoleCommand;
+    ConsoleCommands consoleCommand;
 
-    public addCommand(ConsoleCommand consoleCommand) {
+    public addCommand(ConsoleCommands consoleCommand) {
         this.consoleCommand = consoleCommand;
     }
 

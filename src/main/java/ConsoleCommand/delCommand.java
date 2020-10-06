@@ -1,14 +1,14 @@
 package ConsoleCommand;
 
 public class delCommand implements Command {
-    ConsoleCommand consoleCommand;
+    ConsoleCommands consoleCommand;
 
-    public delCommand(ConsoleCommand consoleCommand) {
+    public delCommand(ConsoleCommands consoleCommand) {
         this.consoleCommand = consoleCommand;
     }
 
     @Override
     public void execute() {
-consoleCommand.del();
+        consoleCommand.del();
     }
 }

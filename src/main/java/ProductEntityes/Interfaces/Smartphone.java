@@ -8,4 +8,6 @@ public interface Smartphone {
     public int getPrice();
     public void setPrice(int price);
 
+    public String getManufactory();
+
 }

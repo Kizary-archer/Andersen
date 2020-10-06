@@ -7,4 +7,5 @@ public interface TV {
 
     public int getPrice();
     public void setPrice(int price);
+    public String  getManufactory();
 }

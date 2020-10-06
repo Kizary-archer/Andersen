@@ -2,9 +2,9 @@ package ConsoleCommand;
 
 public class listCommand implements Command {
 
-    ConsoleCommand consoleCommand;
+    ConsoleCommands consoleCommand;
 
-    public listCommand(ConsoleCommand consoleCommand) {
+    public listCommand(ConsoleCommands consoleCommand) {
         this.consoleCommand = consoleCommand;
     }
 

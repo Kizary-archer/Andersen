@@ -6,6 +6,7 @@ public class SamsungSmartphone implements Smartphone {
 
     String model;
     int price;
+    final String manufactory = "Samsung";
 
     @Override
     public String getModel() {
@@ -24,6 +25,11 @@ public class SamsungSmartphone implements Smartphone {
 
     @Override
     public void setPrice(int price) {
+        this.price = price;
+    }
 
+    @Override
+    public String getManufactory() {
+        return manufactory;
     }
 }
