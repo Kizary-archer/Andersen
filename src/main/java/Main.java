@@ -1,23 +1,15 @@
-//import ConsoleCommand.Command;
-//import ConsoleCommand.ConsoleCommands;
-//import ConsoleCommand.listCommand;
-//import ProductBuilders.Builder;
-//import ProductBuilders.SmartphoneBuilder;
-//import ProductEntityes.Interfaces.Smartphone;
-//import ProductFactory.*;
-//
-//public class Main {
-//    public static void main(String[] args) {
-//
-//        Command command = new listCommand(new ConsoleCommands());
-//        command.execute();
-//        ProductFactory productFactory = new AppleFactory();
-//        Smartphone smartphone = productFactory.createSmartphone();
-//        Builder builder = new SmartphoneBuilder(smartphone);
-//        builder.setModel("sdvv");
-//        builder.setPrise(323);
-//        builder.build();
-//        smartphone.getModel();
-//        smartphone.getPrice();
-//    }
-//}
+import Factory.ProductFactory;
+import Factory.SmartphoneFactory;
+import ProductEntityes.Microphone;
+import ProductEntityes.Product;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ProductFactory productFactory = new SmartphoneFactory();
+        productFactory.createProduct();
+        Product product = productFactory.createProduct();
+        product.setManufacture("dvdvsdv");
+        System.out.println(product.getManufacture());
+    }
+}

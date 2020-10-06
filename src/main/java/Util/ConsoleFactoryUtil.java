@@ -8,7 +8,7 @@ public class ConsoleFactoryUtil {
     private ConsoleFactoryUtil(){};
     public static Scanner getScanner() {
         if (scanner == null) {
-            Scanner scanner = new Scanner(System.in);
+             scanner = new Scanner(System.in);
         }
         return scanner;
     }
