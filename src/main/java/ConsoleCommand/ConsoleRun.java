@@ -1,6 +1,7 @@
+
 package ConsoleCommand;
 
-public class ConsoleRun {
+public class ConsoleRun {//вызывающий команды(invoker)
     Command add;
     Command del;
     Command list;
@@ -19,7 +20,5 @@ public class ConsoleRun {
         del.execute();
     }
 
-    public void listProduct() {
-        list.execute();
-    }
+    public void listProduct() {list.execute();}
 }

@@ -1,9 +1,11 @@
 package ProductBuilders;
 
-public interface Builder<T> {
+import ProductEntityes.Product;
+
+public interface Builder {
 
     public void setManufactore(String manufacture);
     public void setModel(String model);
     public void setPrise(int prise);
-    public T build();
+    public Product build();
 }

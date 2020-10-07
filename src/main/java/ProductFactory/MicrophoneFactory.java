@@ -1,4 +1,4 @@
-package Factory;
+package ProductFactory;
 
 import ProductEntityes.Microphone;
 import ProductEntityes.Product;

@@ -2,10 +2,10 @@ package Util;
 
 import java.util.Scanner;
 
-public class ConsoleFactoryUtil {
+public class ScannerFactoryUtil {
     private static Scanner scanner;
 
-    private ConsoleFactoryUtil(){};
+    private ScannerFactoryUtil(){};
     public static Scanner getScanner() {
         if (scanner == null) {
              scanner = new Scanner(System.in);

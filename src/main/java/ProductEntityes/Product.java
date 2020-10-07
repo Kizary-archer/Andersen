@@ -28,4 +28,6 @@ public abstract class Product {
     public void setPrice(Integer price) {
         this.price = price;
     }
+
+    public abstract String getType();
 }
