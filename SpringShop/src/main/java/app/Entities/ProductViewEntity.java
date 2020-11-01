@@ -1,8 +1,13 @@
 package main.java.app.Entities;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 import java.util.Objects;
 
+@Component
+@Scope("prototype")
 @Entity
 @Table(name = "productview", schema = "public", catalog = "Shop2")
 public class ProductViewEntity {

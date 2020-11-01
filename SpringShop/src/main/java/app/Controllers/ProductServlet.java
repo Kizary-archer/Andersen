@@ -4,6 +4,7 @@ package main.java.app.Controllers;
 
 import main.java.app.Entities.ProductViewEntity;
 import main.java.app.Service.ProductService;
+import main.java.app.Util.SpringConfig;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,7 +23,7 @@ public class ProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        ProductService productService = new ProductService();
+        ProductService productService = SpringConfig.getContext().getBean("productService",ProductService.class);
 
         List<ProductViewEntity> prodList = productService.productList();
         request.setAttribute("productList", prodList);

@@ -7,12 +7,13 @@ import main.java.app.Entities.ProdTypeEntity;
 import main.java.app.Entities.UserEntity;
 import main.java.app.Entities.UserOrderViewEntity;
 import org.hibernate.Session;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.Query;
 import java.util.List;
 
+@Component
 public class UserOrderDAOImpl implements UserOrderDAO {
-
 
     @Override
     public List<UserOrderViewEntity> getUserOrderViewList(UserEntity userEntity) {

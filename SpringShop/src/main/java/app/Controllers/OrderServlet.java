@@ -4,7 +4,9 @@ package main.java.app.Controllers;
 import main.java.app.Entities.UserEntity;
 import main.java.app.Entities.UserOrderEntity;
 import main.java.app.Entities.UserOrderViewEntity;
+import main.java.app.Service.ProductService;
 import main.java.app.Service.UserOrderService;
+import main.java.app.Util.SpringConfig;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,7 +26,7 @@ public class OrderServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        UserOrderService orderService = new UserOrderService();
+        UserOrderService orderService = SpringConfig.getContext().getBean("userOrderService", UserOrderService.class);
         if (request.getServletPath().equals("/addOrder")) {
             UserOrderEntity userOrderEntity = new UserOrderEntity();
             UserEntity userEntity = (UserEntity) session.getAttribute("authUser");

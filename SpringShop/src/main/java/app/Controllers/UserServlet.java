@@ -2,9 +2,11 @@ package main.java.app.Controllers;
 
 import main.java.app.Entities.UserEntity;
 import main.java.app.Entities.UserOrderViewEntity;
+import main.java.app.Service.ProductService;
 import main.java.app.Service.UserOrderService;
 import main.java.app.Service.UserService;
 import main.java.app.Util.HibernateSessionFactoryUtil;
+import main.java.app.Util.SpringConfig;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -31,7 +33,7 @@ public class UserServlet extends HttpServlet {
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserService userService = new UserService();
+        UserService userService = SpringConfig.getContext().getBean("userService", UserService.class);
         if (request.getServletPath().equals("/authUser")) {//авторизация
             RequestDispatcher requestDispatcher;
             try {
@@ -39,7 +41,7 @@ public class UserServlet extends HttpServlet {
                 if (authUser != null) {
                     HttpSession session = request.getSession();
                     session.setAttribute("authUser", authUser);
-                    UserOrderService orderService = new UserOrderService();
+                    UserOrderService orderService = SpringConfig.getContext().getBean("userOrderService",UserOrderService.class);
                     List<UserOrderViewEntity> orderList = orderService.getUserOrderViewList((UserEntity) session.getAttribute("authUser"));
                     request.setAttribute("UserOrders", orderList);
                     requestDispatcher = request.getRequestDispatcher("./view/listUserOrder.jsp");

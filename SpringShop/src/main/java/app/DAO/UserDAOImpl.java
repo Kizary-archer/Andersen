@@ -5,9 +5,10 @@ package main.java.app.DAO;
 import main.java.app.DAO.IDAO.UserDAO;
 import main.java.app.Entities.UserEntity;
 import org.hibernate.Session;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.Query;
-
+@Component
 public class UserDAOImpl implements UserDAO {
     @Override
     public UserEntity getUserByLogin(String login) {
