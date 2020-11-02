@@ -1,7 +1,6 @@
-package main.java.app.DAO.IDAO;
+package app.DAO.IDAO;
 
-
-import main.java.app.Entities.*;
+import app.Entities.*;
 
 import java.util.List;
 

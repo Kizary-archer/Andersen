@@ -1,8 +1,7 @@
-package main.java.app.Service;
+package app.Service;
 
-import main.java.app.DAO.IDAO.ProductDAO;
-import main.java.app.DAO.ProductDAOImpl;
-import main.java.app.Entities.ProductViewEntity;
+import app.DAO.IDAO.ProductDAO;
+import app.Entities.ProductViewEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -1,12 +1,10 @@
-package main.java.app.Controllers;
+package app.Controllers;
 
-
-import main.java.app.Entities.UserEntity;
-import main.java.app.Entities.UserOrderEntity;
-import main.java.app.Entities.UserOrderViewEntity;
-import main.java.app.Service.ProductService;
-import main.java.app.Service.UserOrderService;
-import main.java.app.Util.SpringConfig;
+import app.Entities.UserEntity;
+import app.Entities.UserOrderEntity;
+import app.Entities.UserOrderViewEntity;
+import app.Service.UserOrderService;
+import app.config.SpringConfig;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

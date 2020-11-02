@@ -1,11 +1,11 @@
-package main.java.app.DAO;
+package app.DAO;
 
 
-import main.java.app.DAO.IDAO.UserOrderDAO;
-import main.java.app.Entities.ManufactureEntity;
-import main.java.app.Entities.ProdTypeEntity;
-import main.java.app.Entities.UserEntity;
-import main.java.app.Entities.UserOrderViewEntity;
+import app.DAO.IDAO.UserOrderDAO;
+import app.Entities.ManufactureEntity;
+import app.Entities.ProdTypeEntity;
+import app.Entities.UserEntity;
+import app.Entities.UserOrderViewEntity;
 import org.hibernate.Session;
 import org.springframework.stereotype.Component;
 

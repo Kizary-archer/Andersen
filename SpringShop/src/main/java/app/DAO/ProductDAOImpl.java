@@ -1,9 +1,8 @@
-package main.java.app.DAO;
+package app.DAO;
 
-import main.java.app.DAO.IDAO.ProductDAO;
-import main.java.app.Entities.ProductViewEntity;
+import app.DAO.IDAO.ProductDAO;
+import app.Entities.ProductViewEntity;
 import org.hibernate.Session;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.Query;

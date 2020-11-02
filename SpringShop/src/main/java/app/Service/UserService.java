@@ -1,9 +1,9 @@
-package main.java.app.Service;
+package app.Service;
 
 
-import main.java.app.DAO.IDAO.UserDAO;
-import main.java.app.DAO.UserDAOImpl;
-import main.java.app.Entities.UserEntity;
+
+import app.DAO.IDAO.UserDAO;
+import app.Entities.UserEntity;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

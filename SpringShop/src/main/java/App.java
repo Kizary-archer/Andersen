@@ -1,7 +1,6 @@
-package main.java;
 
-import main.java.app.Entities.ManufactureEntity;
-import main.java.app.Util.SpringConfig;
+import app.Entities.ManufactureEntity;
+import app.config.SpringConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App {

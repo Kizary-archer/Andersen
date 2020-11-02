@@ -1,9 +1,7 @@
-package main.java.app.DAO;
+package app.DAO;
 
-
-
-import main.java.app.DAO.IDAO.UserDAO;
-import main.java.app.Entities.UserEntity;
+import app.DAO.IDAO.UserDAO;
+import app.Entities.UserEntity;
 import org.hibernate.Session;
 import org.springframework.stereotype.Component;
 

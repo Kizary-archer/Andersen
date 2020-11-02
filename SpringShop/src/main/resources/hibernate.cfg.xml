@@ -15,14 +15,14 @@
         <property name="current_session_context_class">thread</property>
         <property name="hibernate.connection.autoReconnect">true</property>
 
-        <mapping class="main.java.app.Entities.ManufactureEntity"/>
-        <mapping class="main.java.app.Entities.ProdTypeEntity"/>
-        <mapping class="main.java.app.Entities.ProductEntity"/>
-        <mapping class="main.java.app.Entities.UserEntity"/>
-        <mapping class="main.java.app.Entities.UserOrderEntity"/>
-        <mapping class="main.java.app.Entities.UserTypeEntity"/>
-        <mapping class="main.java.app.Entities.ProductViewEntity"/>
-        <mapping class="main.java.app.Entities.UserOrderViewEntity"/>
+        <mapping class="app.Entities.ManufactureEntity"/>
+        <mapping class="app.Entities.ProdTypeEntity"/>
+        <mapping class="app.Entities.ProductEntity"/>
+        <mapping class="app.Entities.UserEntity"/>
+        <mapping class="app.Entities.UserOrderEntity"/>
+        <mapping class="app.Entities.UserTypeEntity"/>
+        <mapping class="app.Entities.ProductViewEntity"/>
+        <mapping class="app.Entities.UserOrderViewEntity"/>
 
     </session-factory>
 </hibernate-configuration>

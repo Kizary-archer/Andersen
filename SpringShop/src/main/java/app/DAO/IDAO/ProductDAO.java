@@ -1,8 +1,9 @@
-package main.java.app.DAO.IDAO;
+package app.DAO.IDAO;
 
 
-import main.java.app.Entities.ProductEntity;
-import main.java.app.Entities.ProductViewEntity;
+
+import app.Entities.ProductEntity;
+import app.Entities.ProductViewEntity;
 
 import java.util.List;
 

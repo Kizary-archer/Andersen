@@ -1,7 +1,7 @@
-package main.java.app.Service;
+package app.Service;
 
-import main.java.app.DAO.IDAO.UserOrderDAO;
-import main.java.app.Entities.*;
+import app.DAO.IDAO.UserOrderDAO;
+import app.Entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

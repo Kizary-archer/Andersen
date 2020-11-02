@@ -1,10 +1,9 @@
-package main.java.app.Controllers;
+package app.Controllers;
 
 
-
-import main.java.app.Entities.ProductViewEntity;
-import main.java.app.Service.ProductService;
-import main.java.app.Util.SpringConfig;
+import app.Entities.ProductViewEntity;
+import app.Service.ProductService;
+import app.config.SpringConfig;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
