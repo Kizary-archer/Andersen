@@ -1,10 +1,12 @@
 package app.config;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.thymeleaf.spring5.SpringTemplateEngine;
@@ -12,21 +14,25 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
-@ComponentScan("java")
+@ComponentScan("app")
 @EnableWebMvc
 public class SpringConfig implements WebMvcConfigurer {
 
-    private static AnnotationConfigApplicationContext context;
+    private final ApplicationContext applicationContext;
+
+    @Autowired
+    public SpringConfig(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
+    }
 
     @Bean
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-        templateResolver.setApplicationContext(getContext());
-        templateResolver.setPrefix("/web/views/");
+        templateResolver.setApplicationContext(applicationContext);
+        templateResolver.setPrefix("/WEB-INF/views/");
         templateResolver.setSuffix(".html");
         return templateResolver;
     }
-
     @Bean
     public SpringTemplateEngine templateEngine() {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
@@ -39,12 +45,13 @@ public class SpringConfig implements WebMvcConfigurer {
     public void configureViewResolvers(ViewResolverRegistry registry) {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
         resolver.setTemplateEngine(templateEngine());
+        resolver.setCharacterEncoding("UTF-8");
+        resolver.setContentType("text/html;charset=UTF-8");
         registry.viewResolver(resolver);
     }
-    public static AnnotationConfigApplicationContext getContext() {
-        if (context == null) {
-            context = new AnnotationConfigApplicationContext(SpringConfig.class);
-        }
-        return context;
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        WebMvcConfigurer.super.addResourceHandlers(registry);
+        registry.addResourceHandler("/css/**").addResourceLocations("/css/");
     }
 }

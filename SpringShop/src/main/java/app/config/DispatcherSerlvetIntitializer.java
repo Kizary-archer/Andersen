@@ -12,9 +12,9 @@ public class DispatcherSerlvetIntitializer extends AbstractAnnotationConfigDispa
     protected Class<?>[] getServletConfigClasses() {
         return new Class[]{SpringConfig.class};
     }
-
     @Override
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
+
 }

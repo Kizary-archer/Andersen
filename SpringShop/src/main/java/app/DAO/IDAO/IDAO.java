@@ -1,6 +1,6 @@
 package app.DAO.IDAO;
 
-import main.java.app.Util.HibernateSessionFactoryUtil;
+import app.Util.HibernateSessionFactoryUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 

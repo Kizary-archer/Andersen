@@ -1,12 +1,14 @@
 
 import app.Entities.ManufactureEntity;
+
 import app.config.SpringConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App {
     public static void main(String[] args) {
 
-        AnnotationConfigApplicationContext context = SpringConfig.getContext();
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         ManufactureEntity manufactureEntity = context.getBean("manufactureEntity",ManufactureEntity.class);
         ManufactureEntity manufactureEntity2 = context.getBean("manufactureEntity",ManufactureEntity.class);
         manufactureEntity.setNamemanuf("111");

@@ -1,0 +1,35 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template/header :: #head">
+    <meta charset="windows-1251">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<div th:insert="template/header :: #menu">menu</div>
+<div class="p-3">
+    <div class="accordion" id="accordion">
+        <div class="card">
+            <div class="card-header bg-info" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
+                 aria-expanded="true" aria-controls="collapseOne">
+                <h5 class="mb-0">
+                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                        Список заказов
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    savasvas
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#table').DataTable();
+    });
+</script>
+</body>
+</html>

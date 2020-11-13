@@ -17,11 +17,11 @@ public class UserService {
         this.userDAO = userDAO;
     }
 
-    public UserEntity authorization(String login, String pass) {
+    public UserEntity authorization(UserEntity user) {
         try {
-            if (!login.equals("") && !pass.equals("")) {
-                UserEntity user = userDAO.getUserByLogin(login);
-                if (user != null && BCrypt.checkpw(pass, user.getPassword()))
+            if (!user.getLogin().equals("") && !user.getPassword().equals("")) {
+                UserEntity authUser = userDAO.getUserByLogin(user.getLogin());
+                if (authUser != null && BCrypt.checkpw(user.getPassword(), authUser.getPassword()))
                     return user;
             }
         } catch (Exception e) {

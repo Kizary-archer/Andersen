@@ -1,4 +1,4 @@
-package main.java.app.Util;
+package app.Util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
