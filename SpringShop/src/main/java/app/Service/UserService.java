@@ -22,7 +22,7 @@ public class UserService {
             if (!user.getLogin().equals("") && !user.getPassword().equals("")) {
                 UserEntity authUser = userDAO.getUserByLogin(user.getLogin());
                 if (authUser != null && BCrypt.checkpw(user.getPassword(), authUser.getPassword()))
-                    return user;
+                    return authUser;
             }
         } catch (Exception e) {
             e.printStackTrace();

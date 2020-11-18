@@ -20,7 +20,31 @@
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
-                    savasvas
+                    <table id="table" class="display">
+                        <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Название</th>
+                            <th>Тип</th>
+                            <th>Производитель</th>
+                            <th>Цена</th>
+                            <th>Количество</th>
+                            <th>Общая стоимость</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="order : ${UserOrders}">
+                            <td th:text="*{order.idorder}"></td>
+                            <td th:text="*{order.nameprod}"></td>
+                            <td th:text="*{order.typename}"></td>
+                            <td th:text="*{order.namemanuf}"></td>
+                            <td th:text="*{order.price}"></td>
+                            <td th:text="*{order.count}"></td>
+                            <td th:text="*{order.finalprice}"></td>
+                            <td><a th:href="@{/users/orders/delOrder/{idOrder}(idOrder=*{order.idorder})}" type="submit" class="btn btn-danger m-1">Удалить</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
